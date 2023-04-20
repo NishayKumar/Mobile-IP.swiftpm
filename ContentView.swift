@@ -1,12 +1,33 @@
 import SwiftUI
 
+
 struct ContentView: View {
+    @State var goToHome = false
+    @State private var isShowingSheet = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack{
+            if goToHome {
+                TabBar()
+            }else{
+                OnBoardingScreen()
+            }
         }
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("Success")), perform: { _ in
+            withAnimation{self.goToHome = true}
+        })
+        
     }
 }
+
+
+
+
+struct Previews_ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewInterfaceOrientation(.landscapeRight)
+    }
+}
+
+
