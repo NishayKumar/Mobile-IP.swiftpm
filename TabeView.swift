@@ -9,8 +9,10 @@ import SwiftUI
 
 struct TabBar: View {
     
+    @State private var isShowingSheet = false
     @StateObject var pageData = HomePage()
     @Namespace var animation
+    
     
     var body: some View {
         VStack{
@@ -69,6 +71,7 @@ struct TabBar: View {
             
             
         }
+       
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(pageData.selectedTab == "home" ? Color.black.ignoresSafeArea(.all, edges: .all) : Color.accentColor.ignoresSafeArea(.all, edges: .all))
         
