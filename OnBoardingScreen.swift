@@ -10,44 +10,11 @@ import SwiftUI
 
 
 struct OnBoardingScreen: View {
-    @State private var isShowingTravelModes = false
     var body: some View{
         
         ZStack{
                   Color.black.ignoresSafeArea(.all)
-            HStack {
-                
-                VStack {
-                    
-                    Button(action: {
-                        isShowingTravelModes.toggle()
-                            
-                    }, label: {
-                        Color.clear
-                    })
-                    .frame(width: 50, height: 50)
-                    .padding()
-                    .background(Color.accentColor)
-                    .cornerRadius(40)
-                    .sheet(isPresented: $isShowingTravelModes){
-                        ZStack {
-                            Text("Temporary Text!!!")
-                                .foregroundColor(.white)
-                                .font(.largeTitle)
-                        }
-                        
-                        
-                            
-                    }
-                    
-                    Spacer()
-                }
-                Spacer()
-            }
-            
-            
-            
-            
+      
             HStack {
                 Image("icon1")
                     .resizable()
@@ -115,6 +82,7 @@ struct OnBoardingScreen: View {
                 Spacer(minLength: 20)
                 
                 Slider()
+
             }
         }
         

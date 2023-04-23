@@ -9,19 +9,16 @@ import SwiftUI
 
 struct IntroSheetView: View {
     @State private var isShowingSheet = false
-//    @State private var showAnimation = false
     var body: some View {
         Group {
             ZStack {
                 Color.black
                 VStack {
                     Text("MOBILE INTERNET PROTOCOL")
-                    
                         .font(.system(size: 45))
                         .fontWeight(.heavy)
                         .foregroundColor(.accentColor)
-                        .padding()
-                    
+                        .padding() 
                     Text("""
 It's a communication protocol that lets users maintain the same IP address even when they switch from one network to another. This ensures that their ongoing communication sessions and connections won't be disrupted.
 
@@ -46,7 +43,7 @@ Alright folks, Let's explore the world of Mobile IP and bring it to life! ðŸŒŠðŸ
                     Spacer()
                     
                     Button(action: {
-                        isShowingSheet = false
+                        isShowingSheet.toggle()
                     }) {
                         Text("OKAY")
                             .font(.title)

@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct PacketAnimationButton: View {
-    @State private var showAnimation = false
-    
+    @State private var showAnimationButton = false
     
     var body: some View {
         VStack {
             Spacer()
-            ZStack{
-                if showAnimation {
+            ZStack {
+                if showAnimationButton {
                     PacketAnimation()
                 } else {
                     HStack {
@@ -26,7 +25,7 @@ struct PacketAnimationButton: View {
                                 .fontWeight(.heavy)
                                 .foregroundColor(customColor1)
                             Button(action: {
-                                showAnimation.toggle()
+                                showAnimationButton.toggle()
                             }) {
                                 Circle()
                                     .fill(Color.accentColor)

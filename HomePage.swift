@@ -14,30 +14,26 @@ class HomePage: ObservableObject{
 
 struct Home: View{
     @State private var isShowingSheet = false
-    
-    
+
     var body: some View{
         ZStack {
-            
             VStack {
-                Spacer()
                 Image("7")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                Spacer()
             }
-            PacketAnimationButton()
+            ZStack {
+                ButtonSheetView()
+                PacketAnimationButton()
+            }
             
-            ButtonSheetView()
         }
-        .onAppear {
-            isShowingSheet = true
-        }.sheet(isPresented: $isShowingSheet) {
+//        .onAppear {
+//            isShowingSheet = true
+//        }
+        .sheet(isPresented: $isShowingSheet) {
             IntroSheetView()
         }
-        
-        
-        
     }
 }
 
