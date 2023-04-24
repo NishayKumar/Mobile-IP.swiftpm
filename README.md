@@ -1,4 +1,4 @@
 #  Title
 
-![intro page](Mobile-IP.swiftp/Assets/screenshots/IntroSS.png)
+![intro page](/Assets/screenshots/IntroSS.png)
 
