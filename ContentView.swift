@@ -6,11 +6,11 @@ struct ContentView: View {
     var body: some View {
         
         ZStack{
-            if goToHome {
+//            if goToHome {
                 TabBar()
-            }else{
-                OnBoardingScreen()
-            }
+//            }else{
+//                OnBoardingScreen()
+//            }
         }
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("Success")), perform: { _ in
             withAnimation{self.goToHome = true}
