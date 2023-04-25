@@ -8,10 +8,10 @@ Furthermore, the application also includes the mobile node's response to the dat
 I am committed to maintaining ethical and legal standards in my work, and as such, I ensured the use of licensed materials under CC BY 4.0.
 
 # Getting Started
-1. Click on the "Clone" button on the right side of the page.
+1. Click on the "Code" button on the right side of the page.
 2. Copy the HTTPS URL.
 3. Open your termianl and type `git clone` followed by the URL.
-4. Then, type `open .` to open the folder in which you cloned the project.
+4. To access the current folder where the project was cloned, enter the command `open .` into your terminal.
 5. Open the swiftpm file in Xcode and run it.
 
 
