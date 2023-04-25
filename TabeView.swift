@@ -79,3 +79,10 @@ struct TabBar: View {
     }
 }
 
+
+struct Previews_TabeView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewInterfaceOrientation(.landscapeRight)
+    }
+}
