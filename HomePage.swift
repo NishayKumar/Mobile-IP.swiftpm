@@ -26,9 +26,9 @@ struct Home: View{
 //            PacketAnimationButton()
             
         }
-//        .onAppear {
-//            isShowingSheet = true
-//        }
+        .onAppear {
+            isShowingSheet = true
+        }
         .sheet(isPresented: $isShowingSheet) {
             Group {
                 ZStack {

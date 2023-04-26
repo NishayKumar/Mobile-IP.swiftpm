@@ -24,21 +24,6 @@ struct ContentView: View {
 }
 
 
-struct ModalView: View {
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        VStack {
-            Text("This is a modal view")
-            Button("Dismiss") {
-                presentationMode.wrappedValue.dismiss()
-            }
-        }
-    }
-}
-
-
-
 
 struct Previews_ContentView_Previews: PreviewProvider {
     static var previews: some View {
