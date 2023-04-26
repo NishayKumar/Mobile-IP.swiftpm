@@ -3,11 +3,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State var goToHome = false
+    @State private var isShowingSheet = false
     var body: some View {
         
         ZStack{
 //            if goToHome {
                 TabBar()
+                
+                
+
 //            }else{
 //                OnBoardingScreen()
 //            }
@@ -16,6 +20,20 @@ struct ContentView: View {
             withAnimation{self.goToHome = true}
         })
         
+    }
+}
+
+
+struct ModalView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        VStack {
+            Text("This is a modal view")
+            Button("Dismiss") {
+                presentationMode.wrappedValue.dismiss()
+            }
+        }
     }
 }
 
