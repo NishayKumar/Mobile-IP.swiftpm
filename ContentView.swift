@@ -3,14 +3,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State var goToHome = false
-    @State private var isShowingSheet = false
+    
     var body: some View {
         
         ZStack{
 //            if goToHome {
                 TabBar()
-                
-                
 
 //            }else{
 //                OnBoardingScreen()
@@ -18,6 +16,11 @@ struct ContentView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("Success")), perform: { _ in
             withAnimation{self.goToHome = true}
+
+            
+            
+            
+            
         })
         
     }

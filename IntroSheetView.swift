@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct IntroSheetView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var isShowingSheet = false
     var body: some View {
         Group {
@@ -18,7 +19,7 @@ struct IntroSheetView: View {
                         .font(.system(size: 45))
                         .fontWeight(.heavy)
                         .foregroundColor(.accentColor)
-                        .padding() 
+                        .padding()
                     Text("""
 It's a communication protocol that lets users maintain the same IP address even when they switch from one network to another. This ensures that their ongoing communication sessions and connections won't be disrupted.
 
@@ -43,7 +44,8 @@ Alright folks, Let's explore the world of Mobile IP and bring it to life! ðŸŒŠðŸ
                     Spacer()
                     
                     Button(action: {
-                        isShowingSheet.toggle()
+//                        isShowingSheet.toggle()
+                        self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("OKAY")
                             .font(.title)
@@ -60,6 +62,13 @@ Alright folks, Let's explore the world of Mobile IP and bring it to life! ðŸŒŠðŸ
                 
             }
         }
+        
+    }
+}
 
+struct Previews_IntroSheetView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }

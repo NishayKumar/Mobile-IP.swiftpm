@@ -9,13 +9,12 @@ import SwiftUI
 
 struct TabBar: View {
     
-    @State private var isShowingSheet = false
     @StateObject var pageData = HomePage()
     @Namespace var animation
     
     
     var body: some View {
-        VStack{
+        VStack {
             if pageData.selectedTab == "help" {
                 IntroView()
             }else{
@@ -67,9 +66,7 @@ struct TabBar: View {
             }
             .background(Color.black.opacity(0.15))
             .cornerRadius(33)
-            .padding(.top)
-            
-            
+            .padding(.top)           
         }
        
         .frame(maxWidth: .infinity, maxHeight: .infinity)
