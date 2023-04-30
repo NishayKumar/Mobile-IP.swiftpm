@@ -9,11 +9,14 @@ import SwiftUI
 
 class HomePage: ObservableObject{
     @Published var selectedTab = "home"
+    @Published var isShowingSheet = false // new state variable
 }
 
 
 struct Home: View{
-    @State private var isShowingSheet = false
+    @StateObject var homePage = HomePage() // add an instance of HomePage
+
+//    @State private var isShowingSheet = false
     
     var body: some View {
         ZStack {
@@ -23,14 +26,14 @@ struct Home: View{
                     .aspectRatio(contentMode: .fit)
             }
             
-//            ButtonSheetView()
+            ButtonSheetView()
             PacketAnimationButton() // start button for packet animation
             
         }
         .onAppear {
-            isShowingSheet = true
+            homePage.isShowingSheet = true
         }
-        .sheet(isPresented: $isShowingSheet) {
+        .sheet(isPresented: $homePage.isShowingSheet) {
             IntroSheetView()
 
         }

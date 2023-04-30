@@ -13,8 +13,8 @@ struct OnBoardingScreen: View {
     var body: some View{
         
         ZStack{
-                  Color.black.ignoresSafeArea(.all)
-      
+            Color.black.ignoresSafeArea(.all)
+            
             HStack {
                 Image("icon1")
                     .resizable()
@@ -62,8 +62,8 @@ struct OnBoardingScreen: View {
                     .font(.system(size: 68))
                     .foregroundColor(.accentColor)
                     .bold()
-                    
-
+                
+                
                 
                 
                 Text("Have you ever wondered how your iPhone and iPad stay connected even when you move between different networks, such as moving from one location to another?")
@@ -82,7 +82,7 @@ struct OnBoardingScreen: View {
                 Spacer(minLength: 20)
                 
                 Slider()
-
+                
             }
         }
         
