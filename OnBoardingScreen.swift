@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct OnBoardingScreen: View {
     var body: some View{
         
@@ -48,8 +46,6 @@ struct OnBoardingScreen: View {
             HStack {
                 Spacer()
                 VStack{
-                    
-                    
                     Image("icon4")
                         .resizable()
                         .frame(width: 170, height: 170)
@@ -62,10 +58,6 @@ struct OnBoardingScreen: View {
                     .font(.system(size: 68))
                     .foregroundColor(.accentColor)
                     .bold()
-                
-                
-                
-                
                 Text("Have you ever wondered how your iPhone and iPad stay connected even when you move between different networks, such as moving from one location to another?")
                     .font(.system(size: 40))
                     .foregroundColor(.accentColor)
@@ -74,13 +66,9 @@ struct OnBoardingScreen: View {
                     .padding(.bottom, 210)
             }
             
-            
             VStack{
-                
                 LandscapeIcon()
-                
                 Spacer(minLength: 20)
-                
                 Slider()
                 
             }

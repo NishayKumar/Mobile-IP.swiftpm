@@ -30,8 +30,6 @@ struct LandscapeIcon: View {
                     .scaleEffect(isAnimation ? 2.0 : 2.0)
                     .rotationEffect(isAnimation ? Angle(degrees: 90) : Angle(degrees: 0))
                     .animation(Animation.spring(), value: isAnimation)
-                
-                
             }
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
