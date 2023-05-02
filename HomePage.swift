@@ -27,7 +27,6 @@ struct Home: View{
             
             ButtonSheetView()
             PacketAnimationButton() // start button for packet animation
-            
         }
         .onAppear {
             print(Home.sheetHasBeenPresented)
@@ -43,9 +42,6 @@ struct Home: View{
         
     }
 }
-
-
-
 
 struct Previews_HomePage_Previews: PreviewProvider {
     static var previews: some View {
