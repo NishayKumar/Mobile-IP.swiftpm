@@ -9,14 +9,12 @@ import SwiftUI
 
 class HomePage: ObservableObject{
     @Published var selectedTab = "home"
-    @Published var isShowingSheet = false // new state variable
+    @Published var isShowingSheet = false 
 }
 
 
 struct Home: View{
     @StateObject var homePage = HomePage() // add an instance of HomePage
-
-//    @State private var isShowingSheet = false
     
     var body: some View {
         ZStack {

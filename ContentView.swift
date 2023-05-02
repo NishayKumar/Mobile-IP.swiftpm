@@ -3,7 +3,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State var goToHome = false
-//    @State private var isShowingSheet = false
     var body: some View {
         
         ZStack{

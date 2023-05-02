@@ -9,7 +9,6 @@ import SwiftUI
 
 struct IntroSheetView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var isShowingSheet = false
     var body: some View {
         Group {
             ZStack {
@@ -44,7 +43,6 @@ Alright folks, Let's explore the world of Mobile IP and bring it to life! ðŸŒŠðŸ
                     Spacer()
                     
                     Button(action: {
-//                        isShowingSheet.toggle()
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("OKAY")
