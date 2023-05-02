@@ -72,7 +72,7 @@ struct PacketAnimation: View {
             withAnimation(Animation.easeInOut(duration: 0.5).delay(3.0)) {
                 isHidden1 = true
             }
-            //-----------------
+
             
             iconOffset2 = CGSize(width: -300, height: 0)
             withAnimation(Animation.easeInOut(duration: 3.0).delay(3.5)) {
@@ -81,7 +81,7 @@ struct PacketAnimation: View {
             withAnimation(Animation.easeInOut(duration: 0.5).delay(7.5)) {
                 isHidden2 = true
             }
-            //-----------------
+
             iconOffset3 = CGSize(width: 0, height: -300)
             withAnimation(Animation.easeInOut(duration: 3.0).delay(8.5)) {
                 iconOffset3 = CGSize(width: 300, height: 0)
@@ -89,7 +89,7 @@ struct PacketAnimation: View {
             withAnimation(Animation.easeInOut(duration: 0.5).delay(12.0)) {
                 isHidden3 = true
             }
-            //-----------------
+
             
             iconOffset4 = CGSize(width: 250, height: 0)
             withAnimation(Animation.easeInOut(duration: 3.0).delay(12.0)) {
@@ -98,7 +98,7 @@ struct PacketAnimation: View {
             withAnimation(Animation.easeInOut(duration: 0.5).delay(16.0)) {
                 isHidden4 = true
             }
-            //-----------------
+
             
             iconOffset5 = CGSize(width: 450, height: -300)
             withAnimation(Animation.easeInOut(duration: 3.0).delay(16.0)) {
@@ -107,7 +107,7 @@ struct PacketAnimation: View {
             withAnimation(Animation.easeInOut(duration: 0.5).delay(20.0)) {
                 isHidden5 = true
             }
-            //-----------------
+
             iconOffset6 = CGSize(width: 250, height: 0)
             withAnimation(Animation.easeInOut(duration: 3.0).delay(20.0)) {
                 iconOffset6 = CGSize(width: 0, height: 300)
@@ -115,7 +115,7 @@ struct PacketAnimation: View {
             withAnimation(Animation.easeInOut(duration: 0.5).delay(24.0)) {
                 isHidden6 = true
             }
-            //-----------------
+
         }
     }
 }
